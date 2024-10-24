@@ -11,6 +11,9 @@ const nextConfig = {
                {
                     hostname: "unsplash.com"
                },
+               {
+                    hostname: "www.clipartmax.com"
+               },
           ]
      }
 };
