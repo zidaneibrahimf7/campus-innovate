@@ -7,11 +7,19 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { WobbleCard } from "@/components/ui/wobble-card";
 import { faBookOpenReader, faComments, faHandHoldingDollar, faInfinity, faLightbulb, faPerson } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import React from "react";
 
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
-);
+const transition = { duration: 1, ease: [.25,.1,.25,1] };
+const variants = {
+  hidden: { filter: "blur(10px)", transform: "translateY(20%)", opacity: 0 },
+  visible: { filter: "blur(0)", transform: "translateY(0)", opacity: 1 },
+};
+
+// const Skeleton = () => (
+//   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
+// );
 
 const items = [
   {
@@ -47,10 +55,35 @@ const items = [
 ];
 
 export default function GoalsPage(){
+     const textTitle = "Mengapa Harus Campus Innovate?";
+     const wordsTitle = textTitle.split(" ");  
      return (
           <>
                <main>
-                    <section className="flex justify-center items-center min-h-screen">
+                    <motion.section
+                         initial="hidden"
+                         whileInView="visible"
+                         transition={{ staggerChildren: 0.06 }}
+                         className="pt-[100px] pb-[4rem] px-[120px] flex flex-col gap-[60px]"
+                    >
+                          <h1 className="font-bold text-[4rem] text-secondary">
+                              {wordsTitle.map((word, index) => (
+                                   <React.Fragment key={index}>
+                                        <motion.span className="inline-block" transition={transition} variants={variants}>
+                                        {word}
+                                        </motion.span>
+                                        {index < wordsTitle.length - 1 && ' '}
+                                   </React.Fragment>
+                              ))}
+                    </h1>
+                    </motion.section>
+
+                    <motion.section 
+                         initial="hidden"
+                         whileInView="visible"
+                         transition={{ staggerChildren: 0.06 }}
+                         className="flex justify-center"
+                    >
                          <BentoGrid className="max-w-[90rem] mx-auto gap-[2rem]">
                               {items.map((item, i) => (
                               <BentoGridItem
@@ -64,8 +97,14 @@ export default function GoalsPage(){
                               />
                               ))}
                          </BentoGrid>
-                    </section>
-                    <section className="flex justify-center items-center min-h-screen">
+                    </motion.section>
+
+                    <motion.section 
+                         initial="hidden"
+                         whileInView="visible"
+                         transition={{ staggerChildren: 0.06 }}
+                         className="flex justify-center pt-[100px] pb-[80px]"
+                    >
                          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full min-h-[20rem]">
                               <WobbleCard containerClassName="col-span-1 min-h-[300px]">
                                    <h2 className="max-w-80 md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
@@ -97,7 +136,7 @@ export default function GoalsPage(){
                                    /> */}
                               </WobbleCard>
                          </div>
-                    </section>
+                    </motion.section>
                </main>
           </>
      )
