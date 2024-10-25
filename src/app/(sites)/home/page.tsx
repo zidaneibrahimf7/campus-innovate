@@ -118,7 +118,7 @@ export default function DashboardPage(){
                          ))}
                     </h3>
                     <div className="flex flex-row w-full">
-                         <AnimatedTooltip items={events}   />
+                         <AnimatedTooltip items={events} width={90}   />
                     </div>
                </motion.section>
           </main>
