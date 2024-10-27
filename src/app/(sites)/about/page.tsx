@@ -1,6 +1,7 @@
 import { BackgroundLines } from '@/components/ui/background-lines';
 import { faHammer, faLeaf, faLink, faRunning, faSearch, faUserTie } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
 
 export default function AboutPage() {
   const icon = [
@@ -30,7 +31,7 @@ export default function AboutPage() {
 
   return (
     <section>
-      <BackgroundLines className="py-[100px] px-[120px] w-full flex flex-col gap-[60px] justify-center">
+      <main className="py-[100px] px-[120px] z-0 w-full flex flex-col gap-[60px] justify-center">
         <h1 className="text-[2.25rem] text-white text-center font-normal">
           So Here's our <span className="text-secondary font-bold"> brand value</span> idea
         </h1>
@@ -42,20 +43,23 @@ export default function AboutPage() {
             </section>
           ))}
         </article>
-      </BackgroundLines>
-      <main className="px-[120px] py-[44px] flex gap-[18px] w-full *:w-[50%]">
-        <article className="flex flex-col gap-5">
-          <h1 className="text-[2.25rem] text-white font-bold">Know Our Story</h1>
-          {content.map((data, index) => (
-            <aside key={index} className="py-4 px-5 gap-3 bg-white rounded-tr-md rounded-br-md">
-              <h2 className="font-bold text-[22px] text-primary">{data.title} </h2>
-              <p className="text-[18px] text-[#373642] font-normal">{data.description}</p>
-            </aside>
-          ))}
-        </article>
-        <article className="flex flex-col gap-[30px] *:mx-[42px] justify-center">
-          <button className="py-[14px] w-fit px-[24px] bg-secondary font-medium rounded-md text-primary">Hubungi Kami</button>
-        </article>
+      </main>
+      <main className="flex flex-col gap-5 px-[120px] py-[44px]">
+        <h1 className="text-[2.25rem] text-white font-bold">Know Our Story</h1>
+        <main className="flex gap-[18px] w-full *:w-[50%]">
+          <article className="flex flex-col gap-5">
+            {content.map((data, index) => (
+              <aside key={index} className="py-4 px-5 gap-3 bg-white rounded-tr-md rounded-br-md">
+                <h2 className="font-bold text-[22px] text-primary">{data.title} </h2>
+                <p className="text-[18px] text-[#373642] font-normal">{data.description}</p>
+              </aside>
+            ))}
+          </article>
+          <article className="flex flex-col gap-[30px] *:mx-[42px] justify-center">
+            <Image className="rounded-lg" src="/assets/images/klhk_1.jpg" alt="Logo BSI" width={550} height={580} />
+            <button className="py-[14px] w-fit px-[24px] bg-secondary font-medium rounded-md text-primary">Hubungi Kami</button>
+          </article>
+        </main>
       </main>
     </section>
   );
