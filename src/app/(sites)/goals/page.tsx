@@ -81,10 +81,11 @@ export default function GoalsPage(){
                     <motion.section 
                          initial="hidden"
                          whileInView="visible"
-                         transition={{ staggerChildren: 0.06 }}
                          className="flex justify-center"
+                         transition={transition} 
+                         variants={variants}
                     >
-                         <BentoGrid className="max-w-[90rem] mx-auto gap-[2rem]">
+                         <BentoGrid className="max-w-[90rem] mx-auto gap-[2rem]" >
                               {items.map((item, i) => (
                               <BentoGridItem
                                    key={i}
@@ -102,7 +103,8 @@ export default function GoalsPage(){
                     <motion.section 
                          initial="hidden"
                          whileInView="visible"
-                         transition={{ staggerChildren: 0.06 }}
+                         transition={transition} 
+                         variants={variants}
                          className="flex justify-center pt-[100px] pb-[80px]"
                     >
                          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full min-h-[20rem]">
