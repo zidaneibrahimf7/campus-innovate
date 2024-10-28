@@ -84,30 +84,13 @@ export default function DashboardPage(){
                      <motion.div className="pt-4 mt-2" transition={transition} variants={variants}>
                             <Button borderRadius="1.35rem">Hubungi Kami</Button>
                     </motion.div>
-
-               </motion.section>
-
-               <motion.section
+                    <motion.div
                     initial="hidden"
                     whileInView="visible"
                     transition={{ staggerChildren: 0.04 }}
-                    className="col-span-3 flex justify-center items-center mt-3 pt-3"
+                    className="col-span-2 col-start-2 mt-[3rem] pt-[30px] pb-[120px]"
                >
-                    <motion.div transition={transition} variants={variants}>
-                         <DirectionAwareHover imageUrl={imageUrl} className="md:h-[32rem] md:w-[32rem] w-60 h-96 mb-3">
-                              <p className="font-bold text-xl">Campus Innovate Teams</p>
-                              <p className="font-normal text-sm">Media Campus Innovate - All Right Reserved @2024</p>
-                         </DirectionAwareHover>
-                    </motion.div>
-               </motion.section>
-
-               <motion.section
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{ staggerChildren: 0.04 }}
-                    className="col-span-2 col-start-2 mt-3 pt-[30px] pb-[120px]"
-               >
-                    <h3 className="font-bold text-[2rem] text-secondary mb-[20px]">
+                    <h3 className="font-bold text-[2rem] text-secondary">
                          {wordsClient.map((word, index) => (
                               <React.Fragment key={index}>
                               <motion.span className="inline-block" transition={transition} variants={variants}>
@@ -117,9 +100,24 @@ export default function DashboardPage(){
                               </React.Fragment>
                          ))}
                     </h3>
-                    <div className="flex flex-row w-full">
+                    <div className="flex flex-row w-full mt-[2rem]">
                          <AnimatedTooltip items={events} width={90}   />
                     </div>
+               </motion.div>
+               </motion.section>
+
+               <motion.section
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{ staggerChildren: 0.04 }}
+                    className="col-span-3 flex justify-center items-center mt-3 pt-3"
+               >
+                    <motion.div transition={transition} variants={variants}>
+                         <DirectionAwareHover imageUrl={imageUrl} className="md:h-[40rem] md:w-[32rem] w-60 h-96 mb-3">
+                              <p className="font-bold text-xl">Campus Innovate Teams</p>
+                              <p className="font-normal text-sm">Media Campus Innovate - All Right Reserved @2024</p>
+                         </DirectionAwareHover>
+                    </motion.div>
                </motion.section>
           </main>
      )
