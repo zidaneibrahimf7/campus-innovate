@@ -28,7 +28,6 @@ export default function capacityBuildingPage(){
      ]
 
      const handleTabChange = (tabTitle: string) => {
-          // Update sectionHeight based on the active tab's title
           setSectionHeight(tabTitle === "Paket Perhari" ? "md:h-[75rem]" : "md:h-[53rem]");
      };
 
