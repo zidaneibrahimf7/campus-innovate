@@ -12,10 +12,11 @@ import { motion } from "framer-motion";
 import {Button} from '@/components/ui/moving-border'
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
-import React from "react";
+import React, { useState } from "react";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { AnimatedTooltipPreview } from "@/components/custom/AnimatedTooltip/animated-tooltip-demo";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+import LoadingButton from "@/components/custom/Loading/loadingButton";
 
 const transition = { duration: 1, ease: [.25,.1,.25,1] };
 const variants = {
@@ -47,7 +48,20 @@ export default function DashboardPage(){
      const words = text.split(" ");  
      const wordsClient = clientText.split(" ");  
      // const imageUrl = `https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80`
-     const imageUrl = `/assets/images/campus-innovate-team.png`
+     const imageUrl = `/assets/images/fullteam.jpg`
+     const [loading, setLoading] = useState<boolean>(false)
+
+     const handleToCallViaWa = (e: React.FormEvent<HTMLFormElement>) => {
+          e.preventDefault()
+          setLoading(true)
+          setTimeout(() => {
+               setLoading(false)
+               // const urlToWhatsapp = `https://wa.me/628112012626?text=Halo Kak, Nama: ${name}, Pesan: ${message}`
+                const urlToWhatsapp = `https://wa.me/6285882514394`;
+               window.open(urlToWhatsapp, "_blank")
+
+          }, 2000)
+     }
 
      return (
           // <main className="text-white grid grid-cols-9 items-center min-h-screen">
@@ -82,7 +96,7 @@ export default function DashboardPage(){
                          <Highlight className="text-primary font-semibold">meningkatkan keterampilan kepemimpinan</Highlight> untuk menjadi <Highlight className="text-primary dark:text-primary font-semibold">pemimpin inovatif</Highlight>.
                     </motion.p>
                      <motion.div className="pt-4 mt-2" transition={transition} variants={variants}>
-                            <Button borderRadius="1.35rem">Hubungi Kami</Button>
+                            <Button borderRadius="1.35rem" onClick={handleToCallViaWa}>{loading ? <div className="flex gap-2"><LoadingButton /> Loading...</div> : "Hubungi Kami"}</Button>
                     </motion.div>
                     <motion.div
                     initial="hidden"

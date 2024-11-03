@@ -12,12 +12,14 @@ type Tab = {
 
 export const Tabs = ({
   tabs: propTabs,
+  onTabChange,
   containerClassName,
   activeTabClassName,
   tabClassName,
   contentClassName,
 }: {
   tabs: Tab[];
+  onTabChange?: (tabTitle: string) => void;
   containerClassName?: string;
   activeTabClassName?: string;
   tabClassName?: string;
@@ -26,12 +28,25 @@ export const Tabs = ({
   const [active, setActive] = useState<Tab>(propTabs[0]);
   const [tabs, setTabs] = useState<Tab[]>(propTabs);
 
-  const moveSelectedTabToTop = (idx: number) => {
+  // const moveSelectedTabToTop = (idx: number) => {
+  //   const newTabs = [...propTabs];
+  //   const selectedTab = newTabs.splice(idx, 1);
+  //   newTabs.unshift(selectedTab[0]);
+  //   setTabs(newTabs);
+  //   setActive(newTabs[0]);
+    
+  // };
+
+    // Function to handle tab change
+  const handleTabChange = (tab: Tab, idx: number) => {
     const newTabs = [...propTabs];
     const selectedTab = newTabs.splice(idx, 1);
     newTabs.unshift(selectedTab[0]);
     setTabs(newTabs);
     setActive(newTabs[0]);
+
+    // Call onTabChange if provided
+    onTabChange?.(tab.title);
   };
 
   const [hovering, setHovering] = useState(false);
@@ -40,16 +55,17 @@ export const Tabs = ({
     <>
       <div
         className={cn(
-          "flex flex-row items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+          "flex flex-row gap-2 px-[60px] items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
           containerClassName
         )}
       >
         {propTabs.map((tab, idx) => (
           <button
             key={tab.title}
-            onClick={() => {
-              moveSelectedTabToTop(idx);
-            }}
+            // onClick={() => {
+            //   moveSelectedTabToTop(idx);
+            // }}
+            onClick={() => handleTabChange(tab, idx)}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
             className={cn("relative px-4 py-2 rounded-full", tabClassName)}
@@ -100,7 +116,7 @@ export const FadeInDiv = ({
     return tab.value === tabs[0].value;
   };
   return (
-    <div className="relative w-full h-full">
+    <div className="relative flex justify-center mx-auto gap-2 w-[90%] h-full">
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}
