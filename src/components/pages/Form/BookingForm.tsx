@@ -52,11 +52,11 @@ export function SignupFormDemo() {
                </h2>
           </section>
            <form className="mt-8 mb-2" onSubmit={handleSubmit}>
-               <section>
+               <section className="my-7">
                     <Label htmlFor="name">Name</Label>
                     <Input id="firstname" placeholder="Enter yourname...." type="text" onChange={handleTextName}/>
                </section>
-               <section>
+               <section className="my-7">
                     <Label htmlFor="message">Kirim Pesan</Label>
                     <Input id="message" placeholder="Enter your message..." type="text" onChange={handleTextMessage} />
                </section>

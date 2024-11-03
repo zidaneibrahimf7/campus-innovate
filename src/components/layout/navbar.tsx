@@ -16,27 +16,33 @@ export default function Navbar() {
     {
       title: 'Home',
       link: '/home',
+      isHidden: false
     },
     {
       title: 'Layanan',
-      link: '/layanan',
+      link: '/services',
+      isHidden: false
     },
     {
       title: 'Visi Misi',
       link: '/goals',
+      isHidden: false
     },
     {
       title: 'Portofolio',
       link: '/portofolio',
+      isHidden: false
     },
     {
       title: 'Tentang Kami',
       link: '/about',
+      isHidden: false
     },
   ];
   const [select, setSelect] = useState(0);
   const router = useRouter();
   const pathname = usePathname();
+  
 
   const handleSelect = (index: number) => {
     // setSelect(index)
@@ -45,7 +51,7 @@ export default function Navbar() {
         return router.push('/home');
         break;
       case 1:
-        return router.push('/layanan');
+        return router.push('/services');
         break;
       case 2:
         return router.push('/goals');
@@ -98,7 +104,7 @@ export default function Navbar() {
             <Modal>
               <ModalTrigger className="py-[14px] px-5 text-[18px] bg-secondary/90 text-primary border-secondary rounded-xl group/modal-btn">
                 <span className="flex group-hover/modal-btn:translate-x-[16rem] text-center transition duration-500">
-                  <FontAwesomeIcon icon={faUmbrellaBeach} fontSize={20} className='mr-3' />
+                  <FontAwesomeIcon icon={faThumbtack} fontSize={20} className='mr-3 mt-1' />
                   Book an Appointment
                 </span>
                 <span className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">

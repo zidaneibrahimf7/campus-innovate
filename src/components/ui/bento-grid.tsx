@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export const BentoGrid = ({
   className,
@@ -40,6 +41,7 @@ export const BentoGridItem = ({
       )}
     >
       {header}
+      
       <div className="group-hover/bento:translate-x-2 transition duration-200">
         {icon}
         <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">

@@ -5,8 +5,10 @@ import { Modal, ModalBody, ModalContent, ModalTrigger } from '@/components/ui/an
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function PortofolioPage() {
+
   const transition = { duration: 1, ease: [.25,.1,.25,1] };
   const variants = {
     hidden: { filter: "blur(10px)", transform: "translateY(20%)", opacity: 0 },
@@ -79,7 +81,6 @@ export default function PortofolioPage() {
   },
 ];
 
-
   return (
     <main>
       <section 
@@ -104,7 +105,7 @@ export default function PortofolioPage() {
             </ModalTrigger>
             <ModalBody>
               <ModalContent className=''>
-                  <iframe className="rounded-lg" width="100%" height="610" src="/assets/images/testimoni.mp4" allow="autoplay" allowFullScreen></iframe>
+                <iframe src="https://drive.google.com/file/d/1VZarqbEygPugoTtnsVljyfI1wI3r0_ey/preview" className="rounded-lg" width="100%" height="610" allow="autoplay"></iframe>
               </ModalContent>
             </ModalBody>
             </Modal>
