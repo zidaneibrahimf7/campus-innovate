@@ -33,7 +33,8 @@ export default function capacityBuildingPage(){
 
   return (
     <main>
-          <section className={`h-[75rem] ${sectionHeight} [perspective:1000px] flex flex-col max-w-[90rem] mx-auto w-full items-start justify-start mt-10 mb-40`}>
+          {/* <section className={`h-[75rem] ${sectionHeight} [perspective:1000px] flex flex-col max-w-[90rem] mx-auto w-full items-start justify-start mt-10 mb-40`}> */}
+          <section className={`h-[90rem] md:h-[55rem] perspective:1000px] flex flex-col max-w-[90rem] mx-auto w-full items-start justify-start mt-10 mb-40`}>
                <Button onClick={() => router.push('/services/event')} className="flex gap-2 px-4 py-2 ml-[4rem] mb-4 rounded-md border border-neutral-300 bg-neutral-100 text-primary text-sm hover:-translate-y-1 transform transition duration-200 hover:bg-secondary">
                     <FontAwesomeIcon icon={faCircleLeft} className="mt-0.5"  /> Back
                </Button>
