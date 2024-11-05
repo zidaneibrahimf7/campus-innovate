@@ -20,10 +20,10 @@ const text = "Event Organizer Specialist";
 
 export default function EventPage(){
       const data = [
-          {title : 'Capacity Building', image :'/assets/images/cda_1.JPG', path: '/services/event/capacity-building' },
-          {title : 'Outbound', image :'/assets/images/cda_2.JPG', path: '/services/event/outbound'},
-          {title : 'Malam/Siang Keakraban', image :'/assets/images/cda_3.JPG', path: '/services/event/familirity'},
-          {title : 'Latihan Dasar Kepemimpinan Siswa', image :'/assets/images/cda_4.JPG',  path: '/services/event/ldks'}
+          {title : 'Capacity Building', image :'/assets/images/eo/capBuilding/cap_4.jpeg', path: '/services/event/capacity-building' },
+          {title : 'Outbound', image :'/assets/images/eo/outbound/build_1.JPG', path: '/services/event/outbound'},
+          {title : 'Malam/Siang Keakraban', image :'/assets/images/eo/makrab/akrab.jpeg', path: '/services/event/familirity'},
+          {title : 'LDKS', image :'/assets/images/eo/ldks/ldks.jpeg',  path: '/services/event/ldks'}
      ]
 
      const router = useRouter()

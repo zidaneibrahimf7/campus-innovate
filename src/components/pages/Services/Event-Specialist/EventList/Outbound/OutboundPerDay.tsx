@@ -24,15 +24,18 @@ export default function OutboundEventsPerDay(){
                          <li>Spanduk Kegiatan</li>
                     </ul>
                <span className="italic mt-3 text-sm">*fasilitas dapat disesuaikan dengan pilihan paket dan permintaan</span>
+                <section className="flex gap-2 mt-3">
+                    <span className="p-1 bg-primary rounded-xl font-bold">Min 30 Pax</span>
+               </section>
                </section>
                <section>
-                    <DirectionAwareHover imageUrl={'/assets/images/klhk_1.jpg'} imageClassName="w-[40rem] h-[35rem]">
-                         <p className="font-bold text-xl">KLHK with Campus Innovate</p>
+                    <DirectionAwareHover imageUrl={'/assets/images/eo/outbound/build_1.JPG'} imageClassName="w-[40rem] h-[35rem]">
+                         <p className="font-bold text-xl">Outbound with Campus Innovate</p>
                          <p className="font-normal text-sm">@2024 - Campus Innovate - All Right Reserved</p>
                     </DirectionAwareHover>
                </section>
            </section>
-            <section>
+            {/* <section>
                <h4 className="my-4">Penawaran Paket Harga</h4>
                     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                     <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -123,7 +126,7 @@ export default function OutboundEventsPerDay(){
                     </table>
                     </div>
                     <span className="italic mt-3 text-sm">*Permintaan paket diluar harga penawaran dapat disesuaikan dengan permintaan</span>
-               </section>
+               </section> */}
      </TabServices>
      )
 }                 

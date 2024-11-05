@@ -23,14 +23,13 @@ export default function Rafting(){
                          <li>Banner Kegiatan</li>
                     </ul>
                     {/* <span className="italic mt-3 text-sm">*fasilitas dapat disesuaikan dengan pilihan paket dan permintaan</span> */}
-                    <section className="flex gap-2 mt-5">
+                    <section className="flex gap-2 mt-5 mt-3">
                          <span className="p-1 bg-primary rounded-xl font-bold">Min 30 Pax</span>
-                         <span className="p-1 bg-secondary/70 rounded-xl font-bold">Rp300.000/Pax</span>
                     </section>
                </section>
                <section className="col-span-2">
-                    <DirectionAwareHover imageUrl={'/assets/images/klhk_3.jpg'} imageClassName="w-[40rem] h-[35rem]">
-                         <p className="font-bold text-xl">KLHK with Campus Innovate</p>
+                    <DirectionAwareHover imageUrl={'/assets/images/eo/outbound/build_1.JPG'} imageClassName="w-[40rem] h-[35rem]">
+                         <p className="font-bold text-xl">Outbound Rafting with Campus Innovate</p>
                          <p className="font-normal text-sm">@2024 - Campus Innovate - All Right Reserved</p>
                     </DirectionAwareHover>
                </section>

@@ -34,8 +34,8 @@ export default function DescriptionProgramEventOrganizer(){
                     </section>
                </section>
                <section>
-                    <DirectionAwareHover imageUrl={'/assets/images/klhk_3.jpg'} imageClassName="w-[180rem] h-[35rem]">
-                         <p className="font-bold text-xl">KLHK with Campus Innovate</p>
+                    <DirectionAwareHover imageUrl={'/assets/images/eo/capBuilding/cap_2.jpeg'} imageClassName="w-[180rem] h-[35rem]">
+                         <p className="font-bold text-xl">CDA IPB Capacity Building</p>
                          <p className="font-normal text-sm">@2024 - Campus Innovate - All Right Reserved</p>
                     </DirectionAwareHover>
                </section>

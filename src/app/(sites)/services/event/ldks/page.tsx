@@ -7,6 +7,7 @@ import { faCircleLeft, faPerson, faShareNodes } from "@fortawesome/free-solid-sv
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
+import { Button as Buttons } from "@/components/ui/moving-border"
 
 
 export default function LdksPage(){
@@ -19,9 +20,9 @@ export default function LdksPage(){
      ];
 
      const activites = [
-          { title: 'Outbond & Team Building Activities', description: 'Aktivitas luar ruangan seperti atv, dan rafting untuk melatih keberanian dan kekompakan tim.', image: '/assets/images/cda_2.jpg'  },
-          { title: 'Leadership Simulation Games', description: 'Amazing Race dengan tantangan lintas pos untuk menguji strategi dan kerja sama tim.', image: '/assets/images/klhk_2.jpg'  },
-          { title: 'Workshop dan Mentoring', description: 'Sesi mentoring langsung dengan mentor berprestasi untuk menginspirasi dan memotivasi siswa.', image: '/assets/images/klhk_3.jpg'  },
+          { title: 'Outbond & Team Building Activities', description: 'Aktivitas luar ruangan seperti atv, dan rafting untuk melatih keberanian dan kekompakan tim.', image: '/assets/images/eo/makrab/akrab.jpeg'  },
+          { title: 'Leadership Simulation Games', description: 'Amazing Race dengan tantangan lintas pos untuk menguji strategi dan kerja sama tim.', image: '/assets/images/eo/capBuilding/cap_1.jpeg'  },
+          { title: 'Workshop dan Mentoring', description: 'Sesi mentoring langsung dengan mentor berprestasi untuk menginspirasi dan memotivasi siswa.', image: '/assets/images/cda_6.JPG'  },
           { title: 'Character Building through Reflection', description: 'Sesi refleksi dan api unggun di malam hari untuk memperkuat kesadaran diri dan membangun kepercayaan diri.', image: '/assets/images/cda_1.JPG'  },
      ]
 
@@ -41,7 +42,7 @@ export default function LdksPage(){
                     <h1 className="text-secondary font-bold capitalize text-[2rem] mb-5">Latihan Dasar Kepemimpinan Siswa</h1>
                     <h4 className="text-white font-bold capitalize text-2xl mb-5">Sekilas Tentang LDKS</h4>
 
-                    <section className="grid grid-cols-4 gap-2">
+                    <section className="grid grid-cols-4 gap-[6rem]">
                          <section className="col-span-2">
                               <p className="text-white">
                                    Latihan Dasar Kepemimpinan Siswa (LDKS) adalah program yang bertujuan mengembangkan potensi kepemimpinan pelajar dengan membekali mereka keterampilan dasar, seperti kerja tim, komunikasi efektif, problem solving, dan pengambilan keputusan. 
@@ -84,6 +85,12 @@ export default function LdksPage(){
                                         />
                                    ))}
                               </BentoGrid>
+                              <div className="mt-[1rem]">
+                                   <span className="text-white italic">Tertarik dengan kami untuk program LDKS?</span>
+                                   <Buttons borderRadius="1.75rem" containerClassName="mt-[1rem] ml-3">
+                                        Hubungi Kami
+                                   </Buttons>
+                              </div>
                          </section>
                     </section>
 
