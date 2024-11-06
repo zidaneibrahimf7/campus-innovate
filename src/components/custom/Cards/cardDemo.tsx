@@ -13,7 +13,7 @@ interface CardDemoProps {
 export function CardDemo({ title, description, category, date, url }: CardDemoProps) {
   // /assets/images/cda_1.png
   return (
-    <div className="w-full group/card flex justify-center">
+    <section className="w-full group/card flex justify-center">
       <div
         className="cursor-pointer overflow-hidden relative card w-[400px] h-[400px] rounded-md shadow-xl max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4"
         style={{ backgroundImage: `url(${url ?? '/assets/images/cda_1.JPG'})`, backgroundPosition: 'center', backgroundSize: 'cover' }}
@@ -31,6 +31,6 @@ export function CardDemo({ title, description, category, date, url }: CardDemoPr
           <p className="font-normal text-sm text-gray-50 relative z-10 my-4">{description ?? 'Card with Author avatar, complete name and time to read - most suitable for blogs.'} </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
