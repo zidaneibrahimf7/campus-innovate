@@ -2,31 +2,49 @@ import { faInstagram, faWebAwesome, faWebflow } from '@fortawesome/free-brands-s
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Divider } from './divider';
+import { LinkPreview } from '../ui/link-preview';
 
 export default function Footer() {
+  const socialMedia = [
+    {
+      title: 'Whatsapp',
+      url: 'https://wa.me/6285882514394',
+    },
+    {
+      title: 'Website',
+      url: 'campusinnovate.com',
+    },
+    {
+      title: 'Instagram',
+      url: 'https://www.instagram.com/campusinnovate',
+    },
+    {
+      title: 'Linkedin',
+      url: 'https://www.linkedin.com/company/104864849/admin/dashboard/',
+    },
+    {
+      title: 'Facebook',
+      url: 'https://www.facebook.com/profile.php?id=61567887567029',
+    },
+  ];
+
   return (
     <footer className="bg-black">
-      <main className="p-[120px] flex flex-col gap-5">
-        <section className="h-[220px] flex flex-col justify-between w-full">
-          <article className="flex justify-between gap-[80px]">
-            <p className="text-[16px] text-white font-normal leading-[32px] text-justify w-[70%]">
-              Campus Innovate berkomitmen menjadi mitra terbaik bagi sekolah dalam menyelenggarakan LDKS yang inspiratif dan bermakna. Kami percaya bahwa dengan dukungan dan program yang tepat, siswa akan berkembang menjadi pemimpin masa
-              depan yang berintegritas, kreatif, dan bertanggung jawab.
+      <main className="md:p-[120px] p-[32px] flex flex-col md:gap-5 gap-3">
+        <section className="min-h-[240px] flex flex-col justify-between w-full">
+          <article className="flex md:flex-row flex-col justify-between md:gap-[80px] gap-4">
+            <p className="md:text-[16px] text-[12px] text-white font-normal leading-[32px] text-justify md:w-[70%] w-full">
+              Campus Innovate berkomitmen memberdayakan mahasiswa dan pelajar untuk menjadi pemimpin serta organisator yang hebat. Kami mengutamakan pengembangan keterampilan melalui program mentoring, leaderhsip development, organizational
+              development, career development dan capacity building/outbound yang dinamis dan interaktif. Layanan ini tidak hanya dirancang untuk mahasiswa, tetapi juga terbuka bagi korporasi, perusahaan, sekolah, dan perguruan tinggi yang
+              ingin memperkuat kerja tim dan kepemimpinan.
             </p>
-            <figure className="flex flex-col text-white text-[16px]">
-              <p>Hubungi Kami:</p>
-              <p className="flex items-center gap-1">
-                <FontAwesomeIcon height={16} width={16} icon={faPhone} />
-                085559070165
-              </p>
-              <p className="flex items-center gap-1">
-                <FontAwesomeIcon height={16} width={16} icon={faWebflow} />
-                innovatecampus@gmail.com
-              </p>
-              <p className="flex items-center gap-1">
-                <FontAwesomeIcon height={16} width={16} icon={faInstagram} />
-                @campusinnovate
-              </p>
+            <figure className="w-[30%] ">
+              <h4 className="text-white text-[20px] font-bold">Hubungi Kami:</h4>
+              {socialMedia.map((data) => (
+                <LinkPreview className="flex w-fit gap-2 flex-wrap text-[16px] font-bold text-secondary" key={data.title} url={data.url}>
+                  {data.title}
+                </LinkPreview>
+              ))}
             </figure>
           </article>
           <Divider />
