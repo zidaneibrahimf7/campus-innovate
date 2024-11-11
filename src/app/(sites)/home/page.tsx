@@ -1,20 +1,11 @@
 'use client'
 
-import { BentoGridDemo } from "@/components/custom/BentoGrid/bento-grid-demo";
-import { CardDemo } from "@/components/custom/Cards/cardDemo";
-import { DirectionAwareHoverDemo } from "@/components/custom/DirectionAwareHover/direction-aware-hover-demo";
-import { FocusCardsDemo } from "@/components/custom/FocusCards/focus-card.demo"
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { HoverEffect } from "@/components/ui/card-hover-effect";
-import { FocusCards } from "@/components/ui/focus-cards"
-import Image from "next/image";
 import { motion } from "framer-motion";
 import {Button} from '@/components/ui/moving-border'
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 import React, { useState } from "react";
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
-import { AnimatedTooltipPreview } from "@/components/custom/AnimatedTooltip/animated-tooltip-demo";
+import { Highlight } from "@/components/ui/hero-highlight";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import LoadingButton from "@/components/custom/Loading/loadingButton";
 
