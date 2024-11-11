@@ -51,7 +51,7 @@ export default function ServicesPage() {
 
   return (
     <main>
-      <section className="h-[90rem] md:h-[50rem] [perspective:1000px] flex flex-col max-w-[90rem] mx-auto w-full items-start justify-start mt-10 mb-40">
+      <section className="h-[100rem] md:h-[50rem] [perspective:1000px] flex flex-col max-w-[90rem] mx-auto w-full items-start justify-start mt-10 mb-40">
         <Tabs tabs={tabs} contentClassName="mt-[3rem]" activeTabClassName="bg-secondary" tabClassName="bg-white text-primary gap-2" />
       </section>
     </main>

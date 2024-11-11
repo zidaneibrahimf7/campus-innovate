@@ -77,7 +77,7 @@ export default function Navbar() {
               <h1 className="text-[24px] hidden text-black font-bold md:flex text-center items-center">Campus Innovate</h1>
             </div>
           </main>
-          <section className="flex md:gap-10 gap-3 items-center">
+          <section className="flex md:gap-10 gap-3 items-center md:text-sm">
             {navbarContent.map((menu, index) => (
               <button
                 onClick={() => handleSelect(index)}
@@ -109,3 +109,4 @@ export default function Navbar() {
     </main>
   );
 }
+

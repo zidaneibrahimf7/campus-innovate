@@ -13,7 +13,7 @@ export default function AtvEvent(){
           {    title : 'ATV (SHORT)', 
                pax:"Min 20 Pax", 
                price: "Rp270.000/Pax", 
-               image :'/assets/images/eo/outbound/build_1.JPG', 
+               image :'/assets/images/eo/outbound/atv_1.jpeg', 
                content: {
                     list: [
                          "3 Lap ",
@@ -32,7 +32,7 @@ export default function AtvEvent(){
                title : 'ATV (LONG)', 
                pax:"Min 20 Pax", 
                price: "Rp350.000/Pax", 
-               image :'/assets/images/eo/outbound/build_2.JPG',
+               image :'/assets/images/eo/outbound/atv_2.jpeg',
                 content: {
                     list: [
                          "6 Lap ",
@@ -51,8 +51,8 @@ export default function AtvEvent(){
 
      return (
      <TabServices>
-          <h3 className="text-primary">ATV (Outbound)</h3>
-           <section className="flex justify-center gap-[5rem] p-3">
+          <h3 className="text-primary md:text-left text-center">ATV (Outbound)</h3>
+            <section className="md:grid flex flex-col-reverse grid-rows-1 grid-flow-col gap-3">
                     {data.map((item, i) => {
                          return (
                               <>
@@ -67,7 +67,7 @@ export default function AtvEvent(){
                                              className="rounded-md"
                                         />
                                         <Label className="text-secondary font-bold text-[2rem] mt-5 flex">{item.title}</Label>
-                                        <section className="flex items-center justify-center">
+                                        <section className="flex flex-col items-center justify-center">
                                              <span className="text-primary font-bold text-xl mt-5 bg-secondary rounded-2xl p-1">{item.pax}</span>
                                              {/* <span className="text-primary font-bold text-xl mt-5 bg-secondary rounded-2xl p-1">{item.price}</span> */}
                                         </section>

@@ -22,20 +22,20 @@ export default function DescriptionMentoring() {
       <section className="md:grid flex flex-col-reverse grid-rows-1 grid-flow-col gap-3">
         <section className="my-3">
           <section className="flex flex-col gap-1 font-normal bg-secondary rounded-md p-3">
-            <h2 className="text-[24px] text-primary font-bold">Mentorship itu ngapain sih?</h2>
+            <h2 className="md:text-[24px] text-primary font-bold text-[16px]">Mentorship itu ngapain sih?</h2>
             <ul className="px-4">
               {mentoring.map((data) => (
-                <li className="font-normal text-[18px] list-disc text-black" key={data}>
+                <li className="font-normal md:text-[18px] list-disc text-black text-[13px]" key={data}>
                   {data}
                 </li>
               ))}
             </ul>
           </section>
           <section className="text-[24px] flex flex-col gap-1 font-normal bg-secondary rounded-md p-3 mt-4">
-            <h2 className="text-[24px] text-primary font-bold">Masalah yang bisa ditangani:</h2>
+            <h2 className="md:text-[24px] text-primary font-bold text-[16px]">Masalah yang bisa ditangani:</h2>
             <ul className="px-4">
               {problem.map((data) => (
-                <li className="font-normal text-[18px] list-disc text-black" key={data}>
+                <li className="font-normal md:text-[18px] list-disc text-black text-[13px]" key={data}>
                   {data}
                 </li>
               ))}
@@ -43,8 +43,8 @@ export default function DescriptionMentoring() {
           </section>
         </section>
         <section className="row-span-1 flex flex-col items-center justify-center">
-          <DirectionAwareHover imageUrl={`/assets/images/cda_5.JPG`} imageClassName="w-[90rem] h-[35rem]">
-            <p className="font-bold text-xl">CDA IPB Campus Innovate</p>
+          <DirectionAwareHover imageUrl={`/assets/images/eo/ldks/mentoring_2.jpg`} imageClassName="w-[90rem] h-[35rem]">
+            <p className="font-bold text-xl">Mentoring Program Campus Innovate</p>
             <p className="font-normal text-sm">@2024 - Campus Innovate - All Right Reserved</p>
           </DirectionAwareHover>
         </section>

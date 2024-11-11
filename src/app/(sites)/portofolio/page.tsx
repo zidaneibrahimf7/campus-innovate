@@ -29,11 +29,11 @@ export default function PortofolioPage() {
       description: 'Derap langkah nan gagah perkasa. Seirama dalam satu suara',
     },
     {
-      url: '/assets/images/cda_3.JPG',
-      category: 'CDA IPB',
-      date: 'March 02th, 2024',
-      name: 'Pose',
-      description: 'Kasih gaya terbaikmu.',
+      url: '/assets/images/klhk_2.jpg',
+      category: 'KLHK',
+      date: 'July 22nd, 2023',
+      name: 'big W',
+      description: 'Jangan lupa berpose.',
     },
     {
       url: '/assets/images/cda_4.JPG',
@@ -57,11 +57,11 @@ export default function PortofolioPage() {
       description: 'Kerja sama untuk menyelesaikan masalah.',
     },
     {
-      url: '/assets/images/klhk_2.jpg',
-      category: 'KLHK',
-      date: 'July 22nd, 2023',
-      name: 'big W',
-      description: 'Jangan lupa berpose.',
+      url: '/assets/images/cda_3.JPG',
+      category: 'CDA IPB',
+      date: 'March 02th, 2024',
+      name: 'Pose',
+      description: 'Kasih gaya terbaikmu.',
     },
   ];
 
@@ -92,10 +92,19 @@ export default function PortofolioPage() {
       >
         <h1 className="text-secondary text-center font-bold capitalize text-[4rem]">portofolio</h1>
         <main>
-          <Modal>
+          <iframe 
+            src="https://drive.google.com/file/d/1VZarqbEygPugoTtnsVljyfI1wI3r0_ey/preview" 
+            className="rounded-lg" 
+            width="100%" 
+            height="610" 
+            allow="autoplay" />
+             <div className="h-[25rem] max-w-[25rem] md:max-w-full flex justify-start rounded-lg flex-col antialiased dark:bg-black md:dark:bg-grid-white items-center justify-center relative overflow-hidden">
+                <InfiniteMovingCards items={testimonials} direction="right" speed="fast" className='md:max-w-[110rem] max-w-[25rem]' />
+             </div>
+          {/* <Modal>
             <ModalTrigger>
-              <div className="h-[20rem] flex justify-start rounded-lg flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-                <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
+              <div className="h-[20rem] max-w-[22.5rem] md:max-w-full flex justify-start rounded-lg flex-col antialiased dark:bg-black md:dark:bg-grid-white items-center justify-center relative overflow-hidden">
+                <InfiniteMovingCards items={testimonials} direction="right" speed="slow" className='md:max-w-[110rem] max-w-[22.5rem]' />
               </div>
             </ModalTrigger>
             <ModalBody>
@@ -103,7 +112,7 @@ export default function PortofolioPage() {
                 <iframe src="https://drive.google.com/file/d/1VZarqbEygPugoTtnsVljyfI1wI3r0_ey/preview" className="rounded-lg" width="100%" height="610" allow="autoplay"></iframe>
               </ModalContent>
             </ModalBody>
-          </Modal>
+          </Modal> */}
         </main>
         {/* <CardDemo key={index} url={res.url} category={res.category} date={res.date} title={res.name} description={res.description} /> */}
         <main className="grid grid-cols gap-[24px]">

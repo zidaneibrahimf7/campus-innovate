@@ -64,9 +64,9 @@ export default function GoalsPage(){
                          initial="hidden"
                          whileInView="visible"
                          transition={{ staggerChildren: 0.06 }}
-                         className="pt-[100px] pb-[4rem] px-[120px] flex flex-col gap-[60px]"
+                         className="md:pt-[100px] md:pb-[4rem] md:px-[120px] p-5 flex flex-col gap-[60px]"
                     >
-                          <h1 className="font-bold text-[4rem] text-secondary">
+                          <h1 className="font-bold md:text-[4rem] text-[2rem] text-center text-secondary">
                               {wordsTitle.map((word, index) => (
                                    <React.Fragment key={index}>
                                         <motion.span className="inline-block" transition={transition} variants={variants}>
@@ -85,7 +85,7 @@ export default function GoalsPage(){
                          transition={transition} 
                          variants={variants}
                     >
-                         <BentoGrid className="max-w-[90rem] mx-auto gap-[2rem]" >
+                         <BentoGrid className="max-w-[90rem] mx-auto gap-[2rem] p-5" >
                               {items.map((item, i) => (
                               <BentoGridItem
                                    key={i}
@@ -105,7 +105,7 @@ export default function GoalsPage(){
                          whileInView="visible"
                          transition={transition} 
                          variants={variants}
-                         className="flex justify-center pt-[100px] pb-[80px]"
+                         className="flex justify-center pt-[100px] pb-[80px] p-5"
                     >
                          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full min-h-[20rem]">
                               <WobbleCard containerClassName="col-span-1 min-h-[300px]">

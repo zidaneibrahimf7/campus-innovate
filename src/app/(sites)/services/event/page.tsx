@@ -22,7 +22,7 @@ export default function EventPage(){
       const data = [
           {title : 'Capacity Building', image :'/assets/images/eo/capBuilding/cap_4.jpeg', path: '/services/event/capacity-building' },
           {title : 'Outbound', image :'/assets/images/eo/outbound/build_1.JPG', path: '/services/event/outbound'},
-          {title : 'Malam/Siang Keakraban', image :'/assets/images/eo/makrab/akrab.jpeg', path: '/services/event/familirity'},
+          {title : 'Malam/Siang Keakraban', image :'/assets/images/eo/makrab/makrab_1.JPG', path: '/services/event/familirity'},
           {title : 'LDKS', image :'/assets/images/eo/ldks/ldks.jpeg',  path: '/services/event/ldks'}
      ]
 
@@ -34,19 +34,19 @@ export default function EventPage(){
 
      return (
           <main>
-               <section className="py-[100px] px-[120px] w-full flex flex-col justify-center">
+               <section className="md:py-[100px] md:px-[120px] p-5 w-full flex flex-col justify-center">
                     <Button onClick={() => router.push('/services')} className=" max-w-[6rem] flex gap-2 px-4 py-2  mb-4 rounded-md border border-neutral-300 bg-neutral-100 text-primary text-sm hover:-translate-y-1 transform transition duration-200 hover:bg-secondary">
                          <FontAwesomeIcon icon={faCircleLeft} className="mt-0.5"  /> Back
                     </Button>
                     <h1 className="text-secondary font-bold capitalize text-[2rem] mb-5">Event Organizer Specialist</h1>
-                    <section className="grid grid-cols-4 gap-4">
+                    <section className="md:grid md:grid-cols-4 gap-4">
                          {
                               data.map((item, i) => {
                                    return (
                                         <Fragment key={i}>
-                                             <section className=" w-full relative w-[25rem]">
+                                             <section className="w-full relative w-[25rem]">
                                                   <section className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
-                                                  <section className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center gap-4">
+                                                  <section className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center gap-4 mb-4">
                                                        <Image 
                                                             src={item.image}
                                                             width={400}
