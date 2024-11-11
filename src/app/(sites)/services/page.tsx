@@ -9,6 +9,7 @@ import DescriptionMeeting from '@/components/pages/Services/Meeting-Streaming/de
 import { useSearchParams } from 'next/navigation';
 import DescriptionProgramEventOrganizer from '@/components/pages/Services/Event-Specialist/descriptionProgramEventOrganizer';
 import DetailMeeting from '@/components/pages/Services/Meeting-Streaming/detailMeeting';
+import { Suspense } from 'react';
 
 export default function ServicesPage() {
   const searchParams = useSearchParams();
@@ -50,10 +51,10 @@ export default function ServicesPage() {
   if (query === 'zoom') return <DetailMeeting />;
 
   return (
-    <main>
+    <Suspense>
       <section className="h-[100rem] md:h-[50rem] [perspective:1000px] flex flex-col max-w-[90rem] mx-auto w-full items-start justify-start mt-10 mb-40">
         <Tabs tabs={tabs} contentClassName="mt-[3rem]" activeTabClassName="bg-secondary" tabClassName="bg-white text-primary gap-2" />
       </section>
-    </main>
+    </Suspense>
   );
 }
