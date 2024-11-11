@@ -39,7 +39,6 @@ export default function DashboardPage(){
      const words = text.split(" ");  
      const wordsClient = clientText.split(" ");  
      // const imageUrl = `https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80`
-     const imageUrl = `/assets/images/fullteam.JPG`
      const [loading, setLoading] = useState<boolean>(false)
 
      const handleToCallViaWa = (e: React.FormEvent<HTMLFormElement>) => {
@@ -99,7 +98,7 @@ export default function DashboardPage(){
                >
                     <motion.div transition={transition} variants={variants}>
                          {/* className="md:h-[40rem] md:w-[32rem] w-60 h-96 mb-3"> */}
-                         <DirectionAwareHover imageUrl={imageUrl} className="md:h-[30rem] md:w-[32rem] w-[27rem] h-[30rem]">
+                         <DirectionAwareHover imageUrl={`/assets/images/team_1.JPG`} className="md:h-[30rem] md:w-[32rem] w-[27rem] h-[30rem]">
                               <p className="font-bold text-xl">Campus Innovate Teams</p>
                               <p className="font-normal text-sm">Media Campus Innovate - All Right Reserved @2024</p>
                          </DirectionAwareHover>
