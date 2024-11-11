@@ -64,15 +64,15 @@ export default function DashboardPage(){
      }
 
      return (
-          // <main className="text-white grid grid-cols-9 items-center min-h-screen">
-          <main className="text-white grid grid-cols-9 py-[100px]">
+          <main className="text-white md:grid md:grid-cols-9 md:py-[100px] flex flex-col gap-5 p-5">
+                  {/* <main className="flex flex-col gap-5 md:px-[120px] px-[18px] md:py-[44px] py-[12px]"></main> */}
               <motion.section
                     initial="hidden"
                     whileInView="visible"
                     transition={{ staggerChildren: 0.06 }}
-                    className="col-span-2 col-start-2 col-span-4"
+                    className="md:col-span-2 md:col-start-2 md:col-span-4"
                >
-                    <h1 className="font-bold text-[5.5rem] text-secondary">
+                    <h1 className="font-bold md:text-[5.5rem] text-[3.5rem] text-secondary">
                          {words.map((word, index) => (
                               <React.Fragment key={index}>
                               <motion.span className="inline-block" transition={transition} variants={variants}>
@@ -98,41 +98,43 @@ export default function DashboardPage(){
                      <motion.div className="pt-4 mt-2" transition={transition} variants={variants}>
                             <Button borderRadius="1.35rem" onClick={handleToCallViaWa}>{loading ? <div className="flex gap-2"><LoadingButton /> Loading...</div> : "Hubungi Kami"}</Button>
                     </motion.div>
-                    <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{ staggerChildren: 0.04 }}
-                    className="col-span-2 col-start-2 mt-[3rem] pt-[30px] pb-[120px]"
-               >
-                    <h3 className="font-bold text-[2rem] text-secondary">
-                         {wordsClient.map((word, index) => (
-                              <React.Fragment key={index}>
-                              <motion.span className="inline-block" transition={transition} variants={variants}>
-                              {word}
-                              </motion.span>
-                              {index < words.length - 1 && ' '}
-                              </React.Fragment>
-                         ))}
-                    </h3>
-                    <div className="flex flex-row w-full mt-[2rem]">
-                         <AnimatedTooltip items={events} width={90}   />
-                    </div>
-               </motion.div>
                </motion.section>
 
                <motion.section
                     initial="hidden"
                     whileInView="visible"
                     transition={{ staggerChildren: 0.04 }}
-                    className="col-span-3 flex justify-center items-center mt-3 pt-3"
+                    className="md:col-span-3 flex justify-center items-center mt-3 pt-3"
                >
                     <motion.div transition={transition} variants={variants}>
-                         <DirectionAwareHover imageUrl={imageUrl} className="md:h-[40rem] md:w-[32rem] w-60 h-96 mb-3">
+                         {/* className="md:h-[40rem] md:w-[32rem] w-60 h-96 mb-3"> */}
+                         <DirectionAwareHover imageUrl={imageUrl} className="md:h-[30rem] md:w-[32rem] w-[27rem] h-[30rem]">
                               <p className="font-bold text-xl">Campus Innovate Teams</p>
                               <p className="font-normal text-sm">Media Campus Innovate - All Right Reserved @2024</p>
                          </DirectionAwareHover>
                     </motion.div>
                </motion.section>
+
+               <motion.div
+                         initial="hidden"
+                         whileInView="visible"
+                         transition={{ staggerChildren: 0.04 }}
+                         className="col-span-2 col-start-2"
+                    >
+                         <h3 className="font-bold text-[2rem] text-secondary">
+                              {wordsClient.map((word, index) => (
+                                   <React.Fragment key={index}>
+                                   <motion.span className="inline-block" transition={transition} variants={variants}>
+                                   {word}
+                                   </motion.span>
+                                   {index < words.length - 1 && ' '}
+                                   </React.Fragment>
+                              ))}
+                         </h3>
+                         <div className="flex flex-row w-full mt-[2rem]">
+                              <AnimatedTooltip items={events} width={90}   />
+                         </div>
+               </motion.div>
           </main>
      )
 }

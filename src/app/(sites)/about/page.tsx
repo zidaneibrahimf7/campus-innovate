@@ -49,8 +49,8 @@ export default function AboutPage() {
 
   return (
     <section>
-      <BackgroundLines className="md:py-[100px] py-[20px] md:px-[120px] px-[18px] w-full flex flex-col gap-6 md:gap-[60px] justify-center" svgOptions={{ duration: 10 }}>
-        <h1 className="text-[2.25rem] text-white text-center font-normal">
+      <BackgroundLines className="md:py-[100px] py-[20px] md:px-[120px] px-[18px] w-full flex flex-col gap-6 md:gap-[60px] md:my-0 my-[5rem] justify-center" svgOptions={{ duration: 10 }}>
+        <h1 className="md:text-[2.25rem] text-[1.5rem] text-white text-center font-normal">
           So Here's our <span className="text-secondary font-bold"> brand value</span> idea
         </h1>
         <article className="flex md:gap-[80px] gap-5 flex-wrap justify-center">

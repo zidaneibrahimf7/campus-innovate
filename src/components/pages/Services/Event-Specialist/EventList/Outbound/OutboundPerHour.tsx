@@ -8,11 +8,13 @@ export default function OutboundEventsPerhour(){
 
      return (
      <TabServices>
-          <h3 className="text-primary">Outbound</h3>
-          <h4>Fasilitas Layanan Outbound Paket Per-Jam</h4>
-           <section className="flex gap-2">
-               <section className="text-[20px] font-normal">
-                    <ul className="list-disc ml-8">
+         <div className="md:text-left text-center">
+               <h3 className="text-primary mb-5">Outbound</h3>
+               <h4 className="md:text-[24px]">Fasilitas Layanan Outbound Paket Perjam</h4>
+          </div>
+          <section className="md:grid flex flex-col-reverse grid-rows-1 grid-flow-col gap-3">
+                <section className="md:text-[20px] font-normal">
+                     <ul className="list-disc ml-8 md:text-[18px] text-[14px]">
                          <li>Fun Games / Team Building Games </li>
                          <li>Instruktur dan tim pendamping </li> 
                          <li>Synergized Games </li>
@@ -25,7 +27,7 @@ export default function OutboundEventsPerhour(){
                     </ul>
                <span className="italic mt-3 text-sm">*fasilitas dapat disesuaikan dengan pilihan paket dan permintaan</span>
                <section className="flex gap-2 mt-3">
-                    <span className="p-1 bg-primary rounded-xl font-bold">Min 30 Pax</span>
+                    <span className="md:p-1 p-3 bg-primary rounded-xl font-bold">Min 30 Pax</span>
                </section>
                </section>
                <section>

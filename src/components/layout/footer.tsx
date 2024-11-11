@@ -34,7 +34,7 @@ export default function Footer() {
         <section className="min-h-[240px] flex flex-col justify-between w-full">
           <article className="flex md:flex-row flex-col justify-between md:gap-[80px] gap-4">
             <p className="md:text-[16px] text-[12px] text-white font-normal leading-[32px] text-justify md:w-[70%] w-full">
-              Campus Innovate berkomitmen memberdayakan mahasiswa dan pelajar untuk menjadi pemimpin serta organisator yang hebat. Kami mengutamakan pengembangan keterampilan melalui program mentoring, leaderhsip development, organizational
+              Campus Innovate berkomitmen memberdayakan mahasiswa dan pelajar untuk menjadi pemimpin serta organisator yang hebat. Kami mengutamakan pengembangan keterampilan melalui program mentoring, leadership development, organizational
               development, career development dan capacity building/outbound yang dinamis dan interaktif. Layanan ini tidak hanya dirancang untuk mahasiswa, tetapi juga terbuka bagi korporasi, perusahaan, sekolah, dan perguruan tinggi yang
               ingin memperkuat kerja tim dan kepemimpinan.
             </p>

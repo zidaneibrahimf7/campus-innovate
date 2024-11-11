@@ -29,8 +29,8 @@ export default function DescriptionOrganization() {
           </section>
         ))}
         <section className="md:row-span-3 flex flex-col items-center justify-center h-full">
-          <DirectionAwareHover imageUrl={`/assets/images/cda_1.JPG`} imageClassName="w-[100rem] h-[35rem]">
-            <p className="font-bold text-xl">CDA IPB Campus Innovate</p>
+          <DirectionAwareHover imageUrl={`/assets/images/eo/ldks/ojan_1.JPG`} imageClassName="w-[100rem] h-[35rem]">
+            <p className="font-bold text-xl">Founder Campus Innovate</p>
             <p className="font-normal text-sm">@2024 - Campus Innovate - All Right Reserved</p>
           </DirectionAwareHover>
         </section>

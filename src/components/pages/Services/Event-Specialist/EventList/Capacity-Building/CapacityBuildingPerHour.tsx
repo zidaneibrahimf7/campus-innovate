@@ -8,11 +8,13 @@ export default function CapacityBuildingEventsPerhour(){
 
      return (
      <TabServices>
-          <h3 className="text-primary">Capacity Building</h3>
-          <h4>Fasilitas Layanan Capacity Building Paket Per-Jam</h4>
-           <section className="flex gap-2">
-               <section className="text-[20px] font-normal">
-                    <ul className="list-disc ml-8">
+         <div className="md:text-left text-center">
+               <h3 className="text-primary mb-5">Capacity Building</h3>
+               <h4 className="md:text-[24px]">Fasilitas Layanan Capacity Building Paket Perjam</h4>
+          </div>
+           <section className="md:grid flex flex-col-reverse grid-rows-1 grid-flow-col gap-3">
+                <section className="md:text-[20px] font-normal">
+                    <ul className="list-disc ml-8 md:text-[18px] text-[14px]">
                          <li>Fun Games / Team Building Games </li>
                          <li>Instruktur dan tim pendamping </li> 
                          <li>Synergized Games </li>
@@ -25,13 +27,13 @@ export default function CapacityBuildingEventsPerhour(){
                     </ul>
                <span className="italic mt-3 text-sm">*fasilitas dapat disesuaikan dengan pilihan paket dan permintaan</span>
                <section className="flex gap-2 mt-3">
-                    <span className="p-1 bg-primary rounded-xl font-bold">Min 30 Pax</span>
+                    <span className="p-3 md:p-1 bg-primary rounded-xl font-bold">Min 30 Pax</span>
                </section>
                </section>
                <section>
                     <DirectionAwareHover imageUrl={'/assets/images/eo/capBuilding/cap_1.jpeg'} imageClassName="w-[40rem] h-[35rem]">
-                         <p className="font-bold text-xl">Capacity Building Campus Innovate</p>
-                         <p className="font-normal text-sm">@2024 - Campus Innovate - All Right Reserved</p>
+                         <p className="font-bold md:text-xl text-sm">Capacity Building Campus Innovate</p>
+                         <p className="font-normal md:text-sm text-xs">@2024 - Campus Innovate - All Right Reserved</p>
                     </DirectionAwareHover>
                </section>
            </section>
