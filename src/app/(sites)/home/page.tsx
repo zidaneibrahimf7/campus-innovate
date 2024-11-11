@@ -39,7 +39,7 @@ export default function DashboardPage(){
      const words = text.split(" ");  
      const wordsClient = clientText.split(" ");  
      // const imageUrl = `https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80`
-     const imageUrl = `/assets/images/fullteam.jpg`
+     const imageUrl = `/assets/images/fullteam.JPG`
      const [loading, setLoading] = useState<boolean>(false)
 
      const handleToCallViaWa = (e: React.FormEvent<HTMLFormElement>) => {
