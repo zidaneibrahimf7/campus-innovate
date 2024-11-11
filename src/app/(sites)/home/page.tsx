@@ -98,7 +98,7 @@ export default function DashboardPage(){
                >
                     <motion.div transition={transition} variants={variants}>
                          {/* className="md:h-[40rem] md:w-[32rem] w-60 h-96 mb-3"> */}
-                         <DirectionAwareHover imageUrl={`/assets/images/team_1.JPG`} className="md:h-[30rem] md:w-[32rem] w-[27rem] h-[30rem]">
+                         <DirectionAwareHover imageUrl={`/assets/images/fullteam.JPG`} className="md:h-[30rem] md:w-[32rem] w-[27rem] h-[30rem]">
                               <p className="font-bold text-xl">Campus Innovate Teams</p>
                               <p className="font-normal text-sm">Media Campus Innovate - All Right Reserved @2024</p>
                          </DirectionAwareHover>
