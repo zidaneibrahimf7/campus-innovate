@@ -1,30 +1,36 @@
-import { faInstagram, faWebAwesome, faWebflow } from '@fortawesome/free-brands-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram, faLinkedin, faWebAwesome, faWebflow, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Divider } from './divider';
 import { LinkPreview } from '../ui/link-preview';
+
 
 export default function Footer() {
   const socialMedia = [
     {
       title: 'Whatsapp',
       url: 'https://wa.me/6285882514394',
+      icon: faWhatsapp
     },
     {
       title: 'Website',
-      url: 'campusinnovate.com',
+      url: '/',
+      icon: faGlobe
     },
     {
       title: 'Instagram',
       url: 'https://www.instagram.com/campusinnovate',
+      icon: faInstagram
     },
     {
       title: 'Linkedin',
       url: 'https://www.linkedin.com/company/104864849/admin/dashboard/',
+      icon: faLinkedin
     },
     {
       title: 'Facebook',
       url: 'https://www.facebook.com/profile.php?id=61567887567029',
+      icon: faFacebook
     },
   ];
 
@@ -41,8 +47,8 @@ export default function Footer() {
             <figure className="w-[30%] ">
               <h4 className="text-white text-[20px] font-bold">Hubungi Kami:</h4>
               {socialMedia.map((data) => (
-                <LinkPreview className="flex w-fit gap-2 flex-wrap text-[16px] font-bold text-secondary" key={data.title} url={data.url}>
-                  {data.title}
+                <LinkPreview className="flex w-fit text-[16px] font-bold text-secondary" key={data.title} url={data.url}>
+                  <FontAwesomeIcon icon={data.icon} className='mr-2 mt-1' />{data.title}
                 </LinkPreview>
               ))}
             </figure>

@@ -41,6 +41,7 @@ export default function capacityBuildingPage(){
                <Tabs 
                     tabs={tabs} 
                     contentClassName="mt-[3rem]" 
+                    containerClassName='pb-[2rem] md:pb-0'
                     activeTabClassName="bg-secondary" 
                     tabClassName="bg-white text-primary gap-2" 
                     onTabChange={handleTabChange} 

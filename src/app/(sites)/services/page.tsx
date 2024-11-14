@@ -9,11 +9,14 @@ import DescriptionMeeting from '@/components/pages/Services/Meeting-Streaming/de
 import { useSearchParams } from 'next/navigation';
 import DescriptionProgramEventOrganizer from '@/components/pages/Services/Event-Specialist/descriptionProgramEventOrganizer';
 import DetailMeeting from '@/components/pages/Services/Meeting-Streaming/detailMeeting';
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 
 export default function ServicesPage() {
   const searchParams = useSearchParams();
   const query = searchParams.get('tab');
+
+    const [sectionHeight, setSectionHeight] = useState<string>("md:h-[50rem]");
+    const [sectionHeightForMobile, setSectionHeightForMobile] = useState<string>("h-[105rem]");
 
   const tabs = [
     {
@@ -31,11 +34,6 @@ export default function ServicesPage() {
       value: 'program-development',
       content: <DescriptionProgramDevelopment />,
     },
-    // {
-    // title: "Career Development",
-    // value: "career-development",
-    // content: <DescriptionCareerDevelopment />
-    // },
     {
       title: 'Organizational Development',
       value: 'organizational-development',
@@ -50,10 +48,24 @@ export default function ServicesPage() {
 
   if (query === 'zoom') return <DetailMeeting />;
 
+   const handleTabChange = (tabTitle: string) => {
+      if(tabTitle === "Program Development") { setSectionHeight("md:h-[50rem]") } else setSectionHeight('md:h-[50rem]')
+      if(tabTitle === "Program Development") { setSectionHeightForMobile("h-[75rem]") } else setSectionHeightForMobile('h-[105rem]')
+      if(tabTitle === "Meeting and Streaming") setSectionHeightForMobile("h-[83rem]")
+    };
+
   return (
     <Suspense>
-      <section className="h-[100rem] md:h-[50rem] [perspective:1000px] flex flex-col max-w-[90rem] mx-auto w-full items-start justify-start mt-10 mb-40">
-        <Tabs tabs={tabs} contentClassName="mt-[3rem]" activeTabClassName="bg-secondary" tabClassName="bg-white text-primary gap-2" />
+      {/* <section className="h-[30rem] md:h-[20rem] [perspective:1000px] flex flex-col max-w-[90rem] mx-auto w-full items-start justify-start mt-10 mb-40"> */}
+       <section className={`${sectionHeightForMobile} ${sectionHeight} [perspective:1000px] flex flex-col max-w-[90rem] mx-auto w-full items-start justify-start mt-10 mb-40`}>
+        <Tabs 
+          tabs={tabs} 
+          contentClassName="mt-[3rem]" 
+          containerClassName='text-xs md:text-[17px] pb-[2rem] md:pb-0'
+          activeTabClassName="bg-secondary" 
+          tabClassName="bg-white text-primary gap-2" 
+          onTabChange={handleTabChange} 
+          />
       </section>
     </Suspense>
   );

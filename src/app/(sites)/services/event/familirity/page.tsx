@@ -15,7 +15,7 @@ export default function FamilityPage(){
                 <Button onClick={() => router.push('/services/event')} className=" max-w-[6rem] flex gap-2 px-4 py-2  mb-4 rounded-md border border-neutral-300 bg-neutral-100 text-primary text-sm hover:-translate-y-1 transform transition duration-200 hover:bg-secondary">
                     <FontAwesomeIcon icon={faCircleLeft} className="mt-0.5"  /> Back
                </Button>
-               <h1 className="text-secondary font-bold capitalize text-[2rem] mb-5">Siang/Malam Keakraban</h1>
+               <h1 className="text-secondary font-bold capitalize md:text-[2rem] text-[1.5rem] mb-5 text-center md:text-left">Siang/Malam Keakraban</h1>
                {/* <section className="grid grid-cols-4 gap-2"> */}
                <section className="md:grid flex flex-col-reverse grid-rows-1 grid-flow-col gap-3">
                     <section className="text-[20px] font-normal col-span-2 text-white">

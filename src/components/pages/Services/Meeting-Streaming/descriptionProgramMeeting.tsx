@@ -1,10 +1,9 @@
 'use client';
 
-import { DirectionAwareHover } from '@/components/ui/direction-aware-hover';
 import Image from 'next/image';
 import TabServices from '../tab.services';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleUser, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { faVideo } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/navigation';
 import { Meteors } from '@/components/ui/meteors';
 import { Button } from '@/components/ui/moving-border';
@@ -31,21 +30,10 @@ export default function DescriptionMeeting() {
                   <h1 className="text-[20px]">{data.title}</h1>
                   <Meteors number={30} />
                   <Button onClick={() => router.push(`/services?tab=zoom`)}>Learn More</Button>
-                  {/* <button onClick={() => router.push(`/services?tab=zoom`)} className="py-[14px] min-w-[200px] text-[18px] w-fit px-[20px] bg-secondary font-medium rounded-full text-primary hover:bg-secondary/80">Learn More</button> */}
                 </section>
               </section>
             </article>
           )
-          // <article key={index} className="bg-primary items-center p-5 py-10 justify-between flex flex-col gap-8 rounded-lg h-full">
-          //      <FontAwesomeIcon className="h-[100px]" icon={faCircleUser}/>
-          //      <section className="flex flex-col gap-1 items-center">
-          //           <h1 className="text-[20px]">
-          //           {data.title}
-          //           </h1>
-          //           <h4 className="text-[16px] font-normal">{data.price} </h4>
-          //      </section>
-          //      <button onClick={() => router.push(`/services?tab=zoom`)} className="py-[14px] min-w-[200px] text-[18px] w-fit px-[20px] bg-secondary font-medium rounded-full text-primary">Learn More</button>
-          // </article>
         )}
       </section>
     </TabServices>
