@@ -12,7 +12,7 @@ export default function DescriptionProgramEventOrganizer(){
             <section className="md:grid flex flex-col-reverse grid-rows-1 grid-flow-col gap-3">
                <section className="my-3">
                      <section className="flex flex-col gap-1 font-normal">
-                         <section className="md:text-[20px] text-[15px] font-normal">
+                         <section className="md:text-[20px] text-[18px] font-normal">
                               <p>
                               Campus Innovate Event Organizer adalah 
                               Corporate Event Specialist yang menangani kebutuhan berbagai macam event. 

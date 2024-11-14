@@ -116,7 +116,7 @@ export default function LdksPage(){
                     </section>
 
                     <section>
-                         <div className="flex justify-center items-center pt-[90px]">
+                         <div className="flex justify-center items-center md:pt-[90px] pt-3">
                               <h5 className="text-white text-[25px] font-bold">Alasan Memilih Campus Innovate sebagai Event Organizer LDKS</h5>
                          </div>
                          <div className="italic text-white flex justify-center mt-3">
