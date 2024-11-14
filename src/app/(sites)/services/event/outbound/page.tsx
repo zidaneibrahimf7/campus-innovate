@@ -43,12 +43,15 @@ export default function OutboundEventPage(){
      ]
 
      const handleTabChange = (tabTitle: string) => {
-          // Update sectionHeight based on the active tab's title
-          setSectionHeight(tabTitle === "ATV" ? "md:h-[79rem]" : "md:h-[55rem]");
-          setSectionHeightForMobile(tabTitle === "Rafting" ? "h-[75rem]" : "h-[90rem]");
-          setSectionHeightForMobile(tabTitle === "ATV" ? "h-[130rem]" : "h-[80rem]");
-          // setSectionHeightForMobile('h-[85rem]')
+          if(tabTitle === "ATV") { setSectionHeight("md:h-[79rem]") } else setSectionHeight('md:h-[55rem]')
+          if(tabTitle === "Rafting") { setSectionHeightForMobile("h-[75rem]") } else setSectionHeightForMobile('h-[90rem]')
+          if(tabTitle === "ATV") setSectionHeightForMobile("h-[130rem]")
+          // setSectionHeight(tabTitle === "ATV" ? "md:h-[79rem]" : "md:h-[55rem]");
+          // setSectionHeightForMobile(tabTitle === "Rafting" ? "h-[75rem]" : "h-[90rem]");
+          // setSectionHeightForMobile(tabTitle === "ATV" ? "h-[130rem]" : "h-[80rem]");
      };
+
+     console.log(sectionHeight, sectionHeightForMobile, 'sw')
      return (
           <main>
                   <section className={`${sectionHeightForMobile} ${sectionHeight} [perspective:1000px] flex flex-col max-w-[90rem] mx-auto w-full items-start justify-start mt-10 mb-40`}>
@@ -59,6 +62,7 @@ export default function OutboundEventPage(){
                     <Tabs 
                          tabs={tabs} 
                          contentClassName="mt-[3rem]" 
+                         containerClassName='pb-[2rem] md:pb-0'
                          activeTabClassName="bg-secondary" 
                          tabClassName="bg-white text-primary gap-2" 
                          onTabChange={handleTabChange} 

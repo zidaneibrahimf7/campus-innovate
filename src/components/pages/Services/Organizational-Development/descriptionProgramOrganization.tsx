@@ -24,8 +24,8 @@ export default function DescriptionOrganization() {
       <section className="md:grid flex flex-col-reverse grid-rows-3 grid-flow-col gap-2">
         {content.map((data, index) => (
           <section key={index} className="flex flex-col *:normal-case gap-1 font-normal bg-secondary rounded-lg p-4">
-            <h2 className="text-[24px] text-primary font-bold">{data.title}</h2>
-            <p className="px-4 text-[18px] text-black">{data.description}</p>
+            <h2 className="md:text-[18px] text-[15px] text-primary font-bold">{data.title}</h2>
+            <p className="px-4 text-black md:text-[18px] text-[15px]">{data.description}</p>
           </section>
         ))}
         <section className="md:row-span-3 flex flex-col items-center justify-center h-full">
